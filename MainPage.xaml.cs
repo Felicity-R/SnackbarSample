@@ -1,4 +1,6 @@
-﻿namespace SnackbarSample
+﻿using CommunityToolkit.Maui.Alerts;
+
+namespace SnackbarSample
 {
     public partial class MainPage : ContentPage
     {
@@ -19,6 +21,9 @@
                 CounterBtn.Text = $"Clicked {count} times";
 
             SemanticScreenReader.Announce(CounterBtn.Text);
+
+            var snackbar = Snackbar.Make($"Button clicked ({count})");
+            snackbar.Show();
         }
     }
 
