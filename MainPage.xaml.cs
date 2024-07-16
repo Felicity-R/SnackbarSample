@@ -22,8 +22,7 @@ namespace SnackbarSample
 
             SemanticScreenReader.Announce(CounterBtn.Text);
 
-            var snackbar = Snackbar.Make($"Button clicked ({count})");
-            snackbar.Show();
+            Application.Current.MainPage.Navigation.PushModalAsync(new ModalPage());
         }
     }
 
